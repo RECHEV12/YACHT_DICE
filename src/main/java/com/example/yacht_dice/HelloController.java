@@ -82,8 +82,6 @@ public class HelloController {
             randList.add(randNumSix());
         }
 
-
-
         for (int i = 0; i < randList.size(); i++) {
             int temp = randList.get(i);
 
@@ -111,8 +109,6 @@ public class HelloController {
 
         cnt = diceList.size();
         randList.clear();
-
-
 
 
     }

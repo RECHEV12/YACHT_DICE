@@ -1,12 +1,9 @@
 package com.example.yacht_dice;
 
-import javafx.fxml.FXML;
-import javafx.scene.image.Image;
-
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class useMethod {
+public class UseMethod {
     public static int randNumSix() {
         int rand = ((int) (Math.random() * 6)) + 1;
         return rand;

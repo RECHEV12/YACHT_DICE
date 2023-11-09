@@ -1,22 +1,14 @@
 package com.example.yacht_dice;
 
-import javafx.beans.property.SimpleStringProperty;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import com.example.yacht_dice.useMethod;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Iterator;
 
-import static com.example.yacht_dice.useMethod.checkAces;
-import static com.example.yacht_dice.useMethod.randNumSix;
+import static com.example.yacht_dice.UseMethod.randNumSix;
 
 public class HelloController {
 
@@ -30,7 +22,6 @@ public class HelloController {
     private ToggleButton toggleFourth;
     @FXML
     private ToggleButton toggleFifth;
-
     @FXML
     private ImageView firstImage;
     @FXML
@@ -41,7 +32,6 @@ public class HelloController {
     private ImageView forthImage;
     @FXML
     private ImageView fifthImage;
-
     @FXML
     private ImageView diceOne;
     @FXML
@@ -54,14 +44,80 @@ public class HelloController {
     private ImageView diceFive;
     @FXML
     private ImageView diceSix;
-
     @FXML
     private Label userTurn;
     @FXML
     private Label leftChace;
 
     @FXML
+    private Label userA_Aces;
+    @FXML
+    private Label userA_Twos;
+    @FXML
+    private Label userA_Threes;
+    @FXML
+    private Label userA_Fours;
+    @FXML
+    private Label userA_Fives;
+    @FXML
+    private Label userA_Sixes;
+    @FXML
+    private Label userA_SubTotal;
+    @FXML
+    private Label userA_Bonus;
+    @FXML
+    private Label userA_Choices;
+    @FXML
+    private Label userA_FoaKind;
+    @FXML
+    private Label userA_FullHouse;
+    @FXML
+    private Label userA_SmallStr;
+    @FXML
+    private Label userA_LargeStr;
+    @FXML
+    private Label userA_Yacht;
+    @FXML
+    private Label userA_Total;
+
+    @FXML
+    private Label userB_Aces;
+    @FXML
+    private Label userB_Twos;
+    @FXML
+    private Label userB_Threes;
+    @FXML
+    private Label userB_Fours;
+    @FXML
+    private Label userB_Fives;
+    @FXML
+    private Label userB_Sixes;
+    @FXML
+    private Label userB_SubTotal;
+    @FXML
+    private Label userB_Bonus;
+    @FXML
+    private Label userB_Choices;
+    @FXML
+    private Label userB_FoaKind;
+    @FXML
+    private Label userB_FullHouse;
+    @FXML
+    private Label userB_SmallStr;
+    @FXML
+    private Label userB_LargeStr;
+    @FXML
+    private Label userB_Yacht;
+    @FXML
+    private Label userB_Total;
+
+    private UserData userA = UserData.getUserA();
+    private UserData userB = UserData.getUserB();
+
+
+    @FXML
     protected void randDice() {
+
 
         // 다이스 객체를 만들어서 toggle 버튼과 이미지 연동
         ArrayList<Dice> diceList = new ArrayList<>(Arrays.asList(
@@ -141,32 +197,51 @@ public class HelloController {
             diceList.get(i).setDiceNum(nowDiceNum);
         }
 
-        calDiceNum(diceList);
+
+        //족보 표시
+        if (userTurn.getText().equals("userA")) {
+            userAcalDiceNum(userA, diceList);
+        }
+        if (userTurn.getText().equals("userB")) {
+            userBcalDiceNum(userB, diceList);
+        }
+
+
+        // 횟수 차감
+        decChance();
+        // 횟수 0이면 유저 변경
+        changeUser(diceList);
+
 
         // 랜덤숫자 및 false 주사위 지우기
         randList.clear();
         falseDice.clear();
-        changeUser();
+
 
     }
 
-    protected void calDiceNum(ArrayList<Dice> diceList) {
+    /**
+     * 족보 점수 확인
+     *
+     * @param diceList
+     */
+    protected void userAcalDiceNum(UserData user, ArrayList<Dice> diceList) {
         //숫자를 담기
         ArrayList<Integer> nowDiceNum = new ArrayList<>();
 
         for (int i = 0; i < diceList.size(); i++) {
             nowDiceNum.add(diceList.get(i).getDiceNum());
         }
-        // 로또 번호 정렬
+        // 번호 정렬
         Collections.sort(nowDiceNum);
 
         // 각 열에 해당하는 숫자 리턴
-        int ace = useMethod.checkAces(diceList);
-        int two = useMethod.checkTwos(diceList);
-        int three = useMethod.checkThrees(diceList);
-        int four = useMethod.checkFours(diceList);
-        int five = useMethod.checkFives(diceList);
-        int six = useMethod.checkSixes(diceList);
+        int ace = UseMethod.checkAces(diceList);
+        int two = UseMethod.checkTwos(diceList);
+        int three = UseMethod.checkThrees(diceList);
+        int four = UseMethod.checkFours(diceList);
+        int five = UseMethod.checkFives(diceList);
+        int six = UseMethod.checkSixes(diceList);
 
         ArrayList<Integer> aceToSix = new ArrayList<>();
         aceToSix.add(ace);
@@ -175,22 +250,22 @@ public class HelloController {
         aceToSix.add(four);
         aceToSix.add(five);
         aceToSix.add(six);
+        int subTotalNum = UseMethod.checkSubTotal(aceToSix);
 
-        int subTotal = useMethod.checkSubTotal(aceToSix);
-//        String result = defaultNum + "/63";
+        String subTotal = subTotalNum + "/63";
 
-        int bonus = useMethod.checkBonus(subTotal);
+        int bonus = UseMethod.checkBonus(subTotalNum);
 
-        int choices = useMethod.checkChoices(diceList);
-        int fourOfAKind = useMethod.checkFourOfAKind(diceList);
-        int fullHouse = useMethod.checkFullHouse(diceList);
-        int smallStraight = useMethod.checkSmallStraight(diceList);
-        int largeStraight = useMethod.checkLargeStraight(diceList);
-        int yacht = useMethod.checkYacht(diceList);
+        int choices = UseMethod.checkChoices(diceList);
+        int fourOfAKind = UseMethod.checkFourOfAKind(diceList);
+        int fullHouse = UseMethod.checkFullHouse(diceList);
+        int smallStraight = UseMethod.checkSmallStraight(diceList);
+        int largeStraight = UseMethod.checkLargeStraight(diceList);
+        int yacht = UseMethod.checkYacht(diceList);
 
 
         ArrayList<Integer> allNumber = new ArrayList<>();
-        allNumber.add(subTotal);
+        allNumber.add(subTotalNum);
         allNumber.add(bonus);
         allNumber.add(choices);
         allNumber.add(fourOfAKind);
@@ -200,7 +275,7 @@ public class HelloController {
         allNumber.add(yacht);
 
 
-        int total = useMethod.checkTotal(allNumber);
+        int total = UseMethod.checkTotal(allNumber);
 
         System.out.println("1 : " + ace);
         System.out.println("2 : " + two);
@@ -220,16 +295,144 @@ public class HelloController {
 
         System.out.println("\n=======================\n");
 
+//        user.setAce(ace);
+//        user.setTwo(two);
+//        user.setThree(three);
+//        user.setFour(four);
+//        user.setFive(five);
+//        user.setSix(six);
+//        user.setSubTotal(subTotal);
+//        user.setBonus(bonus);
+//        user.setChoices(choices);
+//        user.setFoakind(fourOfAKind);
+//        user.setFullHouse(fullHouse);
+//        user.setSmallStraight(smallStraight);
+//        user.setLargeStraight(largeStraight);
+//        user.setYacht(yacht);
+//        user.setTotal(total);
+
+        userA_Aces.setText(Integer.toString(ace));
+        userA_Twos.setText(Integer.toString(two));
+        userA_Threes.setText(Integer.toString(three));
+        userA_Fours.setText(Integer.toString(four));
+        userA_Fives.setText(Integer.toString(five));
+        userA_Sixes.setText(Integer.toString(six));
+        userA_SubTotal.setText(subTotal);
+        userA_Bonus.setText(Integer.toString(bonus));
+        userA_Choices.setText(Integer.toString(choices));
+        userA_FoaKind.setText(Integer.toString(fourOfAKind));
+        userA_FullHouse.setText(Integer.toString(fullHouse));
+        userA_SmallStr.setText(Integer.toString(smallStraight));
+        userA_LargeStr.setText(Integer.toString(largeStraight));
+        userA_Yacht.setText(Integer.toString(yacht));
+
+
     }
 
 
+    protected void userBcalDiceNum(UserData user, ArrayList<Dice> diceList) {
+        //숫자를 담기
+        ArrayList<Integer> nowDiceNum = new ArrayList<>();
+
+        for (int i = 0; i < diceList.size(); i++) {
+            nowDiceNum.add(diceList.get(i).getDiceNum());
+        }
+        // 번호 정렬
+        Collections.sort(nowDiceNum);
+
+        // 각 열에 해당하는 숫자 리턴
+        int ace = UseMethod.checkAces(diceList);
+        int two = UseMethod.checkTwos(diceList);
+        int three = UseMethod.checkThrees(diceList);
+        int four = UseMethod.checkFours(diceList);
+        int five = UseMethod.checkFives(diceList);
+        int six = UseMethod.checkSixes(diceList);
+
+        ArrayList<Integer> aceToSix = new ArrayList<>();
+        aceToSix.add(ace);
+        aceToSix.add(two);
+        aceToSix.add(three);
+        aceToSix.add(four);
+        aceToSix.add(five);
+        aceToSix.add(six);
+        int subTotalNum = UseMethod.checkSubTotal(aceToSix);
+
+        String subTotal = subTotalNum + "/63";
+
+        int bonus = UseMethod.checkBonus(subTotalNum);
+
+        int choices = UseMethod.checkChoices(diceList);
+        int fourOfAKind = UseMethod.checkFourOfAKind(diceList);
+        int fullHouse = UseMethod.checkFullHouse(diceList);
+        int smallStraight = UseMethod.checkSmallStraight(diceList);
+        int largeStraight = UseMethod.checkLargeStraight(diceList);
+        int yacht = UseMethod.checkYacht(diceList);
+
+
+        ArrayList<Integer> allNumber = new ArrayList<>();
+        allNumber.add(subTotalNum);
+        allNumber.add(bonus);
+        allNumber.add(choices);
+        allNumber.add(fourOfAKind);
+        allNumber.add(fullHouse);
+        allNumber.add(smallStraight);
+        allNumber.add(largeStraight);
+        allNumber.add(yacht);
+
+
+        int total = UseMethod.checkTotal(allNumber);
+
+        System.out.println("1 : " + ace);
+        System.out.println("2 : " + two);
+        System.out.println("3 : " + three);
+        System.out.println("4 : " + four);
+        System.out.println("5 : " + five);
+        System.out.println("6 : " + six);
+        System.out.println("1~6 : " + subTotal);
+        System.out.println("bonus  : " + bonus);
+        System.out.println("cho  : " + choices);
+        System.out.println("kin  : " + fourOfAKind);
+        System.out.println("hous  : " + fullHouse);
+        System.out.println("ss : " + smallStraight);
+        System.out.println("ls : " + largeStraight);
+        System.out.println("ya  : " + yacht);
+        System.out.println("total  : " + total);
+
+        System.out.println("\n=======================\n");
+
+//        user.setAce(ace);
+//        user.setTwo(two);
+//        user.setThree(three);
+//        user.setFour(four);
+//        user.setFive(five);
+//        user.setSix(six);
+//        user.setSubTotal(subTotal);
+//        user.setBonus(bonus);
+//        user.setChoices(choices);
+//        user.setFoakind(fourOfAKind);
+//        user.setFullHouse(fullHouse);
+//        user.setSmallStraight(smallStraight);
+//        user.setLargeStraight(largeStraight);
+//        user.setYacht(yacht);
+//        user.setTotal(total);
+
+
+
+    }
+
+    /**
+     * 찬스 소진
+     */
     protected void decChance() {
         int nowNum = Integer.parseInt(leftChace.getText());
-
+        System.out.println(nowNum);
         switch (nowNum) {
 
-            case 1:
+            case 0:
                 nowNum = 3;
+                break;
+            case 1:
+                nowNum = 0;
                 break;
             case 2:
                 nowNum = 1;
@@ -242,21 +445,35 @@ public class HelloController {
         leftChace.setText(Integer.toString(nowNum));
     }
 
-    protected void changeUser() {
+    /**
+     * 유저변경
+     */
+    protected void changeUser(ArrayList<Dice> diceList) {
 
-        if (userTurn.equals("userA")) {
-            decChance();
-            leftChace.equals("1");
-            userTurn.setText("userB");
+        if (userTurn.getText().equals("userA")) {
+            if (leftChace.getText().equals("0")) {
+                leftChace.setText("3");
+                userTurn.setText("userB");
+
+                for (int i = 0; i < diceList.size(); i++) {
+                    diceList.get(i).getButton().setSelected(false);
+                }
+            }
 
 
         }
 
-        if (userTurn.equals("userB")) {
-            decChance();
-            leftChace.equals("1");
-            userTurn.setText("userA");
+        if (userTurn.getText().equals("userB")) {
+            if (leftChace.getText().equals("0")) {
+                leftChace.setText("3");
+                userTurn.setText("userA");
+                for (int i = 0; i < diceList.size(); i++) {
+                    diceList.get(i).getButton().setSelected(false);
+                }
+            }
+
         }
     }
+
 
 }

@@ -158,15 +158,7 @@
     </VBox>
     <VBox alignment="CENTER" layoutX="142.0" layoutY="10.0" prefHeight="706.0" prefWidth="128.0">
         <children>
-            <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="USER 1" textAlignment="CENTER" wrapText="true">
-                <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
-                </VBox.margin>
-                <opaqueInsets>
-                    <Insets />
-                </opaqueInsets>
-            </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="categories" textAlignment="CENTER" wrapText="true">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
                     <Insets bottom="13.0" top="13.0" />
                 </VBox.margin>
@@ -177,7 +169,7 @@
                     <Cursor fx:constant="DEFAULT" />
                 </cursor>
             </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Aces" textAlignment="CENTER" wrapText="true">
+            <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="USER A" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
                     <Insets bottom="13.0" top="13.0" />
                 </VBox.margin>
@@ -185,7 +177,7 @@
                     <Insets />
                 </opaqueInsets>
             </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Twos" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="userA_Aces" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
                     <Insets bottom="13.0" top="13.0" />
                 </VBox.margin>
@@ -193,7 +185,7 @@
                     <Insets />
                 </opaqueInsets>
             </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Threes" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="userA_Twos" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
                     <Insets bottom="13.0" top="13.0" />
                 </VBox.margin>
@@ -201,7 +193,7 @@
                     <Insets />
                 </opaqueInsets>
             </Label>
-            <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="Fours" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="userA_Threes" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
                     <Insets bottom="13.0" top="13.0" />
                 </VBox.margin>
@@ -209,7 +201,7 @@
                     <Insets />
                 </opaqueInsets>
             </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Fives" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="userA_Fours" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
                     <Insets bottom="13.0" top="13.0" />
                 </VBox.margin>
@@ -217,7 +209,7 @@
                     <Insets />
                 </opaqueInsets>
             </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Sixes" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="userA_Fives" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
                     <Insets bottom="13.0" top="13.0" />
                 </VBox.margin>
@@ -225,7 +217,7 @@
                     <Insets />
                 </opaqueInsets>
             </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="TOTAL" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="userA_Sixes" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
                     <Insets bottom="13.0" top="13.0" />
                 </VBox.margin>
@@ -233,7 +225,7 @@
                     <Insets />
                 </opaqueInsets>
             </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="BONUS" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="userA_SubTotal" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
                     <Insets bottom="13.0" top="13.0" />
                 </VBox.margin>
@@ -241,7 +233,7 @@
                     <Insets />
                 </opaqueInsets>
             </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="choices" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="userA_Bonus" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
                     <Insets bottom="13.0" top="13.0" />
                 </VBox.margin>
@@ -249,7 +241,7 @@
                     <Insets />
                 </opaqueInsets>
             </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Four Of A Kind" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="userA_Choices" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
                     <Insets bottom="13.0" top="13.0" />
                 </VBox.margin>
@@ -257,7 +249,7 @@
                     <Insets />
                 </opaqueInsets>
             </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Full House" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="userA_FoaKind" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
                     <Insets bottom="13.0" top="13.0" />
                 </VBox.margin>
@@ -265,7 +257,7 @@
                     <Insets />
                 </opaqueInsets>
             </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="smaill Straiht" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="userA_FullHouse" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
                     <Insets bottom="13.0" top="13.0" />
                 </VBox.margin>
@@ -273,7 +265,7 @@
                     <Insets />
                 </opaqueInsets>
             </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="large Straiht" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="userA_SmallStr" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
                     <Insets bottom="13.0" top="13.0" />
                 </VBox.margin>
@@ -281,7 +273,7 @@
                     <Insets />
                 </opaqueInsets>
             </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="YACHT" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="userA_LargeStr" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
                     <Insets bottom="13.0" top="13.0" />
                 </VBox.margin>
@@ -289,19 +281,7 @@
                     <Insets />
                 </opaqueInsets>
             </Label>
-         <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="TOTAL" textAlignment="CENTER" wrapText="true">
-            <opaqueInsets>
-               <Insets />
-            </opaqueInsets>
-            <VBox.margin>
-               <Insets bottom="13.0" top="13.0" />
-            </VBox.margin>
-         </Label>
-        </children>
-    </VBox>
-    <VBox alignment="CENTER" layoutX="262.0" layoutY="6.0" prefHeight="706.0" prefWidth="128.0">
-        <children>
-            <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="USER 2" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="userA_Yacht" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
                     <Insets bottom="13.0" top="13.0" />
                 </VBox.margin>
@@ -309,127 +289,7 @@
                     <Insets />
                 </opaqueInsets>
             </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="categories" textAlignment="CENTER" wrapText="true">
-                <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
-                </VBox.margin>
-                <opaqueInsets>
-                    <Insets />
-                </opaqueInsets>
-            </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Aces" textAlignment="CENTER" wrapText="true">
-                <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
-                </VBox.margin>
-                <opaqueInsets>
-                    <Insets />
-                </opaqueInsets>
-            </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Twos" textAlignment="CENTER" wrapText="true">
-                <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
-                </VBox.margin>
-                <opaqueInsets>
-                    <Insets />
-                </opaqueInsets>
-            </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Threes" textAlignment="CENTER" wrapText="true">
-                <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
-                </VBox.margin>
-                <opaqueInsets>
-                    <Insets />
-                </opaqueInsets>
-            </Label>
-            <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="Fours" textAlignment="CENTER" wrapText="true">
-                <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
-                </VBox.margin>
-                <opaqueInsets>
-                    <Insets />
-                </opaqueInsets>
-            </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Fives" textAlignment="CENTER" wrapText="true">
-                <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
-                </VBox.margin>
-                <opaqueInsets>
-                    <Insets />
-                </opaqueInsets>
-            </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Sixes" textAlignment="CENTER" wrapText="true">
-                <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
-                </VBox.margin>
-                <opaqueInsets>
-                    <Insets />
-                </opaqueInsets>
-            </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="TOTAL" textAlignment="CENTER" wrapText="true">
-                <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
-                </VBox.margin>
-                <opaqueInsets>
-                    <Insets />
-                </opaqueInsets>
-            </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="BONUS" textAlignment="CENTER" wrapText="true">
-                <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
-                </VBox.margin>
-                <opaqueInsets>
-                    <Insets />
-                </opaqueInsets>
-            </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="choices" textAlignment="CENTER" wrapText="true">
-                <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
-                </VBox.margin>
-                <opaqueInsets>
-                    <Insets />
-                </opaqueInsets>
-            </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Four Of A Kind" textAlignment="CENTER" wrapText="true">
-                <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
-                </VBox.margin>
-                <opaqueInsets>
-                    <Insets />
-                </opaqueInsets>
-            </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Full House" textAlignment="CENTER" wrapText="true">
-                <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
-                </VBox.margin>
-                <opaqueInsets>
-                    <Insets />
-                </opaqueInsets>
-            </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="smaill Straiht" textAlignment="CENTER" wrapText="true">
-                <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
-                </VBox.margin>
-                <opaqueInsets>
-                    <Insets />
-                </opaqueInsets>
-            </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="large Straiht" textAlignment="CENTER" wrapText="true">
-                <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
-                </VBox.margin>
-                <opaqueInsets>
-                    <Insets />
-                </opaqueInsets>
-            </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="YACHT" textAlignment="CENTER" wrapText="true">
-                <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
-                </VBox.margin>
-                <opaqueInsets>
-                    <Insets />
-                </opaqueInsets>
-            </Label>
-         <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="TOTAL" textAlignment="CENTER" wrapText="true">
+         <Label fx:id="userA_Total" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
             <opaqueInsets>
                <Insets />
             </opaqueInsets>
@@ -527,5 +387,148 @@
          <Font size="20.0" />
       </font>
    </Label>
+   <VBox alignment="CENTER" layoutX="270.0" layoutY="8.0" prefHeight="706.0" prefWidth="128.0">
+      <children>
+         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="13.0" top="13.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <cursor>
+               <Cursor fx:constant="DEFAULT" />
+            </cursor>
+         </Label>
+         <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="USER B" textAlignment="CENTER" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="13.0" top="13.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+         </Label>
+         <Label fx:id="userB_Aces" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Aces" textAlignment="CENTER" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="13.0" top="13.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+         </Label>
+         <Label fx:id="userB_Twos" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Twos" textAlignment="CENTER" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="13.0" top="13.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+         </Label>
+         <Label fx:id="userB_Threes" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Threes" textAlignment="CENTER" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="13.0" top="13.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+         </Label>
+         <Label fx:id="userB_Fours" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="Fours" textAlignment="CENTER" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="13.0" top="13.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+         </Label>
+         <Label fx:id="userB_Fives" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Fives" textAlignment="CENTER" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="13.0" top="13.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+         </Label>
+         <Label fx:id="userB_Sixes" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Sixes" textAlignment="CENTER" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="13.0" top="13.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+         </Label>
+         <Label fx:id="userB_SubTotal" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="TOTAL" textAlignment="CENTER" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="13.0" top="13.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+         </Label>
+         <Label fx:id="userB_Bonus" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="BONUS" textAlignment="CENTER" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="13.0" top="13.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+         </Label>
+         <Label fx:id="userB_Choices" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="choices" textAlignment="CENTER" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="13.0" top="13.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+         </Label>
+         <Label fx:id="userB_FoaKind" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Four Of A Kind" textAlignment="CENTER" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="13.0" top="13.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+         </Label>
+         <Label fx:id="userB_FullHouse" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Full House" textAlignment="CENTER" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="13.0" top="13.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+         </Label>
+         <Label fx:id="userB_SmallStr" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="small Straiht" textAlignment="CENTER" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="13.0" top="13.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+         </Label>
+         <Label fx:id="userB_LargeStr" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="large Straiht" textAlignment="CENTER" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="13.0" top="13.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+         </Label>
+         <Label fx:id="userB_Yacht" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="YACHT" textAlignment="CENTER" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="13.0" top="13.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+         </Label>
+         <Label fx:id="userB_Total" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="TOTAL" textAlignment="CENTER" wrapText="true">
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <VBox.margin>
+               <Insets bottom="13.0" top="13.0" />
+            </VBox.margin>
+         </Label>
+      </children>
+   </VBox>
 
 </AnchorPane>

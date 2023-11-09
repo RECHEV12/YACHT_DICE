@@ -3,6 +3,7 @@ package com.example.yacht_dice;
 import javafx.fxml.FXML;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class useMethod {
     public static int randNumSix() {
@@ -98,7 +99,7 @@ public class useMethod {
         int fourNum = diceList.get(3).getDiceNum();
         int fiveNum = diceList.get(4).getDiceNum();
 
-        result = (firstNum+secondNum+thirdNum+fourNum+fiveNum);
+        result = (firstNum + secondNum + thirdNum + fourNum + fiveNum);
 
         return result;
     }
@@ -116,7 +117,7 @@ public class useMethod {
                 firstNum == secondNum && thirdNum == fourNum && firstNum == thirdNum ||
                         secondNum == thirdNum && fourNum == fiveNum && secondNum == fourNum
         ) {
-            result = (firstNum+secondNum+thirdNum+fourNum+fiveNum);
+            result = (firstNum + secondNum + thirdNum + fourNum + fiveNum);
         }
 
         return result;
@@ -131,34 +132,97 @@ public class useMethod {
         int fiveNum = diceList.get(4).getDiceNum();
 
         if (
-                firstNum == secondNum && thirdNum == fourNum && firstNum == thirdNum ||
-                        secondNum == thirdNum && fourNum == fiveNum && secondNum == fourNum
-        ) {
-            result = (firstNum+secondNum+thirdNum+fourNum+fiveNum);
+                firstNum == secondNum && (thirdNum == fourNum && fourNum == fiveNum) ||
+                        (firstNum == secondNum && secondNum == thirdNum) && fourNum == fiveNum) {
+            result = (firstNum + secondNum + thirdNum + fourNum + fiveNum);
         }
         return result;
     }
 
     public static int checkSmallStraight(ArrayList<Dice> diceList) {
         int result = 0;
-        for (int i = 0; i < diceList.size(); i++) {
+        int cnt = 0;
 
+        ArrayList<Integer> straightInt = new ArrayList<>();
+
+
+        for (Dice dice : diceList) {
+            straightInt.add(dice.getDiceNum());
         }
+        Collections.sort(straightInt);
+
+        for (int i = 0; i < straightInt.size() - 1; i++) {
+            if (straightInt.get(i) == straightInt.get(i + 1)) {
+                straightInt.remove(i + 1);
+                i--;
+            }
+        }
+
+        for (int i = 0; i < straightInt.size() - 1; i++) {
+            if (straightInt.get(i) + 1 == straightInt.get(i + 1)) {
+                cnt++;
+
+            }
+        }
+
+        if (cnt >= 3) {
+            result = 15;
+        }
+
+
         return result;
     }
 
     public static int checkLargeStraight(ArrayList<Dice> diceList) {
         int result = 0;
-        for (int i = 0; i < diceList.size(); i++) {
+        int cnt = 0;
 
+        ArrayList<Integer> straightInt = new ArrayList<>();
+
+
+        for (Dice dice : diceList) {
+            straightInt.add(dice.getDiceNum());
         }
+        Collections.sort(straightInt);
+
+        for (int i = 0; i < straightInt.size() - 1; i++) {
+            if (straightInt.get(i) == straightInt.get(i + 1)) {
+                straightInt.remove(i + 1);
+                i--;
+            }
+        }
+
+        for (int i = 0; i < straightInt.size() - 1; i++) {
+            if (straightInt.get(i) + 1 == straightInt.get(i + 1)) {
+                cnt++;
+
+            }
+        }
+
+        if (cnt >= 4) {
+            result = 30;
+        }
+
+
         return result;
     }
 
     public static int checkYacht(ArrayList<Dice> diceList) {
         int result = 0;
-        for (int i = 0; i < diceList.size(); i++) {
 
+        int firstNum = diceList.get(0).getDiceNum();
+        int secondNum = diceList.get(1).getDiceNum();
+        int thirdNum = diceList.get(2).getDiceNum();
+        int fourNum = diceList.get(3).getDiceNum();
+        int fiveNum = diceList.get(4).getDiceNum();
+
+        if (
+                firstNum == secondNum &&
+                        thirdNum == fourNum &&
+                        firstNum == thirdNum &&
+                        fourNum == fiveNum
+        ) {
+            result = 50;
         }
         return result;
     }

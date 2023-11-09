@@ -148,7 +148,7 @@ public class HelloController {
         //숫자를 담기
         ArrayList<Integer> nowDiceNum = new ArrayList<>();
 
-        for (int i = 0 ; i <diceList.size() ; i ++){
+        for (int i = 0; i < diceList.size(); i++) {
             nowDiceNum.add(diceList.get(i).getDiceNum());
         }
         // 로또 번호 정렬
@@ -173,18 +173,18 @@ public class HelloController {
         int subTotal = useMethod.checkSubTotal(aceToSix);
 //        String result = defaultNum + "/63";
 
-        int bonus =  useMethod.checkBonus(subTotal);
+        int bonus = useMethod.checkBonus(subTotal);
 
         int choices = useMethod.checkChoices(diceList);
         int fourOfAKind = useMethod.checkFourOfAKind(diceList);
         int fullHouse = useMethod.checkFullHouse(diceList);
         int smallStraight = useMethod.checkSmallStraight(diceList);
         int largeStraight = useMethod.checkLargeStraight(diceList);
-        int yacht =  useMethod.checkYacht(diceList);
+        int yacht = useMethod.checkYacht(diceList);
 
 
         ArrayList<Integer> allNumber = new ArrayList<>();
-        allNumber.addAll(aceToSix);
+        allNumber.add(subTotal);
         allNumber.add(bonus);
         allNumber.add(choices);
         allNumber.add(fourOfAKind);
@@ -194,11 +194,25 @@ public class HelloController {
         allNumber.add(yacht);
 
 
-
-
-
         int total = useMethod.checkTotal(allNumber);
 
+        System.out.println("1 : " + ace);
+        System.out.println("2 : " + two);
+        System.out.println("3 : " + three);
+        System.out.println("4 : " + four);
+        System.out.println("5 : " + five);
+        System.out.println("6 : " + six);
+        System.out.println("1~6 : " + subTotal);
+        System.out.println("bonus  : " + bonus);
+        System.out.println("cho  : " + choices);
+        System.out.println("kin  : " + fourOfAKind);
+        System.out.println("hous  : " + fullHouse);
+        System.out.println("ss : " + smallStraight);
+        System.out.println("ls : " + largeStraight);
+        System.out.println("ya  : " + yacht);
+        System.out.println("total  : " + total);
+
+        System.out.println("\n=======================\n");
 
     }
 }

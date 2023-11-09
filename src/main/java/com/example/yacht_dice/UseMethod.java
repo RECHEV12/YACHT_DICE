@@ -9,62 +9,62 @@ public class UseMethod {
         return rand;
     }
 
-    public static int checkAces(ArrayList<Dice> diceList) {
+    public static int checkAces(ArrayList<Integer> diceList) {
         int result = 0;
 
         for (int i = 0; i < diceList.size(); i++) {
-            if (diceList.get(i).getDiceNum() == 1) {
-                result += diceList.get(i).getDiceNum();
+            if (diceList.get(i) == 1) {
+                result += diceList.get(i);
             }
         }
         return result;
     }
 
-    public static int checkTwos(ArrayList<Dice> diceList) {
+    public static int checkTwos(ArrayList<Integer> diceList) {
         int result = 0;
         for (int i = 0; i < diceList.size(); i++) {
-            if (diceList.get(i).getDiceNum() == 2) {
-                result += diceList.get(i).getDiceNum();
+            if (diceList.get(i) == 2) {
+                result += diceList.get(i);
             }
         }
         return result;
     }
 
-    public static int checkThrees(ArrayList<Dice> diceList) {
+    public static int checkThrees(ArrayList<Integer> diceList) {
         int result = 0;
         for (int i = 0; i < diceList.size(); i++) {
-            if (diceList.get(i).getDiceNum() == 3) {
-                result += diceList.get(i).getDiceNum();
+            if (diceList.get(i) == 3) {
+                result += diceList.get(i);
             }
         }
         return result;
     }
 
-    public static int checkFours(ArrayList<Dice> diceList) {
+    public static int checkFours(ArrayList<Integer> diceList) {
         int result = 0;
         for (int i = 0; i < diceList.size(); i++) {
-            if (diceList.get(i).getDiceNum() == 4) {
-                result += diceList.get(i).getDiceNum();
+            if (diceList.get(i) == 4) {
+                result += diceList.get(i);
             }
         }
         return result;
     }
 
-    public static int checkFives(ArrayList<Dice> diceList) {
+    public static int checkFives(ArrayList<Integer> diceList) {
         int result = 0;
         for (int i = 0; i < diceList.size(); i++) {
-            if (diceList.get(i).getDiceNum() == 5) {
-                result += diceList.get(i).getDiceNum();
+            if (diceList.get(i) == 5) {
+                result += diceList.get(i);
             }
         }
         return result;
     }
 
-    public static int checkSixes(ArrayList<Dice> diceList) {
+    public static int checkSixes(ArrayList<Integer> diceList) {
         int result = 0;
         for (int i = 0; i < diceList.size(); i++) {
-            if (diceList.get(i).getDiceNum() == 6) {
-                result += diceList.get(i).getDiceNum();
+            if (diceList.get(i) == 6) {
+                result += diceList.get(i);
             }
         }
         return result;
@@ -88,28 +88,28 @@ public class UseMethod {
         return result;
     }
 
-    public static int checkChoices(ArrayList<Dice> diceList) {
+    public static int checkChoices(ArrayList<Integer> diceList) {
         int result = 0;
 
-        int firstNum = diceList.get(0).getDiceNum();
-        int secondNum = diceList.get(1).getDiceNum();
-        int thirdNum = diceList.get(2).getDiceNum();
-        int fourNum = diceList.get(3).getDiceNum();
-        int fiveNum = diceList.get(4).getDiceNum();
+        int firstNum = diceList.get(0);
+        int secondNum = diceList.get(1);
+        int thirdNum = diceList.get(2);
+        int fourNum = diceList.get(3);
+        int fiveNum = diceList.get(4);
 
         result = (firstNum + secondNum + thirdNum + fourNum + fiveNum);
 
         return result;
     }
 
-    public static int checkFourOfAKind(ArrayList<Dice> diceList) {
+    public static int checkFourOfAKind(ArrayList<Integer> diceList) {
         int result = 0;
 
-        int firstNum = diceList.get(0).getDiceNum();
-        int secondNum = diceList.get(1).getDiceNum();
-        int thirdNum = diceList.get(2).getDiceNum();
-        int fourNum = diceList.get(3).getDiceNum();
-        int fiveNum = diceList.get(4).getDiceNum();
+        int firstNum = diceList.get(0);
+        int secondNum = diceList.get(1);
+        int thirdNum = diceList.get(2);
+        int fourNum = diceList.get(3);
+        int fiveNum = diceList.get(4);
 
         if (
                 firstNum == secondNum && thirdNum == fourNum && firstNum == thirdNum ||
@@ -121,13 +121,16 @@ public class UseMethod {
         return result;
     }
 
-    public static int checkFullHouse(ArrayList<Dice> diceList) {
+    public static int checkFullHouse(ArrayList<Integer> diceList) {
+
+        Collections.sort(diceList);
+
         int result = 0;
-        int firstNum = diceList.get(0).getDiceNum();
-        int secondNum = diceList.get(1).getDiceNum();
-        int thirdNum = diceList.get(2).getDiceNum();
-        int fourNum = diceList.get(3).getDiceNum();
-        int fiveNum = diceList.get(4).getDiceNum();
+        int firstNum = diceList.get(0);
+        int secondNum = diceList.get(1);
+        int thirdNum = diceList.get(2);
+        int fourNum = diceList.get(3);
+        int fiveNum = diceList.get(4);
 
         if (
                 firstNum == secondNum && (thirdNum == fourNum && fourNum == fiveNum) ||
@@ -137,16 +140,16 @@ public class UseMethod {
         return result;
     }
 
-    public static int checkSmallStraight(ArrayList<Dice> diceList) {
+    public static int checkSmallStraight(ArrayList<Integer> diceList) {
         int result = 0;
         int cnt = 0;
 
         ArrayList<Integer> straightInt = new ArrayList<>();
 
 
-        for (Dice dice : diceList) {
-            straightInt.add(dice.getDiceNum());
-        }
+        straightInt.addAll(diceList);
+
+
         Collections.sort(straightInt);
 
         for (int i = 0; i < straightInt.size() - 1; i++) {
@@ -171,16 +174,15 @@ public class UseMethod {
         return result;
     }
 
-    public static int checkLargeStraight(ArrayList<Dice> diceList) {
+    public static int checkLargeStraight(ArrayList<Integer> diceList) {
         int result = 0;
         int cnt = 0;
 
         ArrayList<Integer> straightInt = new ArrayList<>();
 
+        straightInt.addAll(diceList);
 
-        for (Dice dice : diceList) {
-            straightInt.add(dice.getDiceNum());
-        }
+
         Collections.sort(straightInt);
 
         for (int i = 0; i < straightInt.size() - 1; i++) {
@@ -205,14 +207,14 @@ public class UseMethod {
         return result;
     }
 
-    public static int checkYacht(ArrayList<Dice> diceList) {
+    public static int checkYacht(ArrayList<Integer> diceList) {
         int result = 0;
 
-        int firstNum = diceList.get(0).getDiceNum();
-        int secondNum = diceList.get(1).getDiceNum();
-        int thirdNum = diceList.get(2).getDiceNum();
-        int fourNum = diceList.get(3).getDiceNum();
-        int fiveNum = diceList.get(4).getDiceNum();
+        int firstNum = diceList.get(0);
+        int secondNum = diceList.get(1);
+        int thirdNum = diceList.get(2);
+        int fourNum = diceList.get(3);
+        int fiveNum = diceList.get(4);
 
         if (
                 firstNum == secondNum &&

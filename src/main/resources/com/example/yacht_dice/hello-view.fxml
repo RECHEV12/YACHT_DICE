@@ -5,27 +5,52 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="1000.0" maxWidth="1000.0" minHeight="700.0" minWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.yacht_dice.HelloController">
-    <VBox alignment="CENTER" layoutX="7.0" layoutY="10.0" prefHeight="715.0" prefWidth="135.0">
+<AnchorPane maxHeight="1000.0" maxWidth="1259.0" minHeight="700.0" minWidth="1100.0" prefHeight="738.0" prefWidth="1259.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.yacht_dice.HelloController">
+    <VBox alignment="CENTER" layoutX="7.0" layoutY="4.0" prefHeight="715.0" prefWidth="199.0">
         <children>
-            <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="Round 1/12" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="roundSet" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="Round 1/12" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
+            <textFill>
+               <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.6447368264198303" green="0.12238060683012009" blue="0.12238060683012009" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </RadialGradient>
+            </textFill>
             </Label>
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="categories" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
@@ -33,134 +58,397 @@
                 <cursor>
                     <Cursor fx:constant="DEFAULT" />
                 </cursor>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
             <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Aces" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
             <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Twos" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
             <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Threes" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
             <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="Fours" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
             <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Fives" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
             <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Sixes" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
             <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="SUB TOTAL" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="BONUS" textAlignment="CENTER" wrapText="true">
+            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="BONUS + 35" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="choices" textAlignment="CENTER" wrapText="true">
+            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Choices" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
             <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Four Of A Kind" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
             <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Full House" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="smaill Straiht" textAlignment="CENTER" wrapText="true">
+            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="small Straight" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="large Straiht" textAlignment="CENTER" wrapText="true">
+            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="large Straight" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
             <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="YACHT" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
          <Label alignment="CENTER" layoutX="56.0" layoutY="675.0" nodeOrientation="LEFT_TO_RIGHT" text="TOTAL" textAlignment="CENTER" wrapText="true">
             <opaqueInsets>
                <Insets />
             </opaqueInsets>
             <VBox.margin>
-               <Insets bottom="13.0" top="13.0" />
+               <Insets bottom="5.0" top="6.0" />
             </VBox.margin>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
          </Label>
         </children>
     </VBox>
-    <VBox alignment="CENTER" layoutX="142.0" layoutY="10.0" prefHeight="706.0" prefWidth="128.0">
+    <ImageView fx:id="firstImage" fitHeight="122.0" fitWidth="124.0" layoutX="536.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../../../images/2.jpg" />
+        </image>
+    </ImageView>
+   <VBox alignment="CENTER" layoutX="355.0" layoutY="4.0" prefHeight="706.0" prefWidth="148.0">
+      <children>
+         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="5.0" top="6.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <cursor>
+               <Cursor fx:constant="DEFAULT" />
+            </cursor>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+         </Label>
+         <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="USER B" textAlignment="CENTER" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="5.0" top="6.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
+         </Label>
+         <Label fx:id="userB_Aces" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#choiceAceUserB" textFill="#1022c3" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="5.0" top="6.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
+         </Label>
+         <Label fx:id="userB_Twos" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#choiceTwoUserB" textFill="#1022c3" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="5.0" top="6.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
+         </Label>
+         <Label fx:id="userB_Threes" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#choiceThreeUserB" textFill="#1022c3" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="5.0" top="6.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
+         </Label>
+         <Label fx:id="userB_Fours" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#choiceFourUserB" textFill="#1022c3" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="5.0" top="6.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
+         </Label>
+         <Label fx:id="userB_Fives" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#choiceFiveUserB" textFill="#1022c3" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="5.0" top="6.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
+         </Label>
+         <Label fx:id="userB_Sixes" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#choiceSixUserB" textFill="#1022c3" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="5.0" top="6.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
+         </Label>
+         <Label fx:id="userB_SubTotal" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="5.0" top="6.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
+         </Label>
+         <Label fx:id="userB_Bonus" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="5.0" top="6.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
+         </Label>
+         <Label fx:id="userB_Choices" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#choiceChoiceUserB" textFill="#1022c3" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="5.0" top="6.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
+         </Label>
+         <Label fx:id="userB_FoaKind" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#choiceFokaUserB" textFill="#1022c3" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="5.0" top="6.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
+         </Label>
+         <Label fx:id="userB_FullHouse" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#choiceFullHouseUserB" textFill="#1022c3" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="5.0" top="6.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
+         </Label>
+         <Label fx:id="userB_SmallStr" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#choiceSSrUserB" textFill="#1022c3" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="5.0" top="6.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
+         </Label>
+         <Label fx:id="userB_LargeStr" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#choiceLSrUserB" textFill="#1022c3" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="5.0" top="6.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
+         </Label>
+         <Label fx:id="userB_Yacht" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#choiceYachtUserB" textFill="#1022c3" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="5.0" top="6.0" />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
+         </Label>
+         <Label fx:id="userB_Total" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" wrapText="true">
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <VBox.margin>
+               <Insets bottom="5.0" top="6.0" />
+            </VBox.margin>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
+         </Label>
+      </children>
+   </VBox>
+    <VBox alignment="CENTER" layoutX="207.0" layoutY="4.0" prefHeight="706.0" prefWidth="148.0">
         <children>
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
@@ -168,164 +456,228 @@
                 <cursor>
                     <Cursor fx:constant="DEFAULT" />
                 </cursor>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
             <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="USER A" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
-            <Label fx:id="userA_Aces" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="userA_Aces" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#choiceAceUserA" textAlignment="CENTER" textFill="#0b02ff" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
-            <Label fx:id="userA_Twos" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="userA_Twos" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#choiceTwoUserA" textAlignment="CENTER" textFill="#0b02ff" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
-            <Label fx:id="userA_Threes" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="userA_Threes" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#choiceThreeUserA" textAlignment="CENTER" textFill="#0b02ff" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
-            <Label fx:id="userA_Fours" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="userA_Fours" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#choiceFourUserA" textAlignment="CENTER" textFill="#0b02ff" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
-            <Label fx:id="userA_Fives" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="userA_Fives" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#choiceFiveUserA" textAlignment="CENTER" textFill="#0b02ff" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
-            <Label fx:id="userA_Sixes" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="userA_Sixes" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#choiceSixUserA" textAlignment="CENTER" textFill="#0b02ff" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
             <Label fx:id="userA_SubTotal" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
             <Label fx:id="userA_Bonus" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
-            <Label fx:id="userA_Choices" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="userA_Choices" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#choiceChoiceUserA" textAlignment="CENTER" textFill="#0b02ff" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
-            <Label fx:id="userA_FoaKind" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="userA_FoaKind" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#choiceFokaUserA" textAlignment="CENTER" textFill="#0b02ff" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
-            <Label fx:id="userA_FullHouse" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="userA_FullHouse" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#choiceFullHouseUserA" textAlignment="CENTER" textFill="#0b02ff" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
-            <Label fx:id="userA_SmallStr" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="userA_SmallStr" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#choiceSSrUserA" textAlignment="CENTER" textFill="#0b02ff" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
-            <Label fx:id="userA_LargeStr" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="userA_LargeStr" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#choiceLSrUserA" textAlignment="CENTER" textFill="#0b02ff" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
-            <Label fx:id="userA_Yacht" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="userA_Yacht" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#choiceYachtUserA" textAlignment="CENTER" textFill="#0b02ff" wrapText="true">
                 <VBox.margin>
-                    <Insets bottom="13.0" top="13.0" />
+                    <Insets bottom="5.0" top="6.0" />
                 </VBox.margin>
                 <opaqueInsets>
                     <Insets />
                 </opaqueInsets>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
             </Label>
          <Label fx:id="userA_Total" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
             <opaqueInsets>
                <Insets />
             </opaqueInsets>
             <VBox.margin>
-               <Insets bottom="13.0" top="13.0" />
+               <Insets bottom="5.0" top="6.0" />
             </VBox.margin>
+            <font>
+               <Font name="Elephant" size="24.0" />
+            </font>
          </Label>
         </children>
     </VBox>
-    <Button fx:id="throwDice" blendMode="DIFFERENCE" cache="true" layoutX="544.0" layoutY="555.0" minHeight="18.0" onAction="#randDice" prefHeight="60.0" prefWidth="62.0" text="roll" />
-    <ToggleButton fx:id="toggleFirst" blendMode="SRC_ATOP" layoutX="393.0" layoutY="431.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="114.0" selected="false" text="ToggleButton" />
-    <ToggleButton fx:id="toggleSecond" blendMode="SRC_ATOP" layoutX="537.0" layoutY="431.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="114.0" selected="false" text="ToggleButton" />
-    <ToggleButton fx:id="toggleThird" blendMode="SRC_ATOP" layoutX="684.0" layoutY="431.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="114.0" selected="false" text="ToggleButton" />
-    <ToggleButton fx:id="toggleFourth" blendMode="SRC_ATOP" layoutX="832.0" layoutY="431.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="114.0" selected="false" text="ToggleButton" />
-    <ToggleButton fx:id="toggleFifth" blendMode="SRC_ATOP" layoutX="972.0" layoutY="431.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="114.0" selected="false" text="ToggleButton" />
-    <ImageView fx:id="firstImage" fitHeight="122.0" fitWidth="124.0" layoutX="392.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
-        <image>
-            <Image url="@../../../images/2.jpg" />
-        </image>
-    </ImageView>
-    <ImageView fx:id="secondImage" fitHeight="122.0" fitWidth="125.0" layoutX="534.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
+    <Button fx:id="throwDice" blendMode="SRC_ATOP" cache="true" layoutX="630.0" layoutY="523.0" minHeight="18.0" mnemonicParsing="false" onAction="#randDice" prefHeight="182.0" prefWidth="188.0" text="ROLL">
+      <font>
+         <Font name="Elephant" size="38.0" />
+      </font></Button>
+    <ToggleButton fx:id="toggleFirst" blendMode="SRC_ATOP" layoutX="558.0" layoutY="428.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="73.0" selected="false" text="🔒">
+      <font>
+         <Font name="Elephant" size="30.0" />
+      </font></ToggleButton>
+    <ToggleButton fx:id="toggleSecond" blendMode="SRC_ATOP" layoutX="703.0" layoutY="428.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="73.0" selected="false" text="🔒">
+      <font>
+         <Font name="Elephant" size="30.0" />
+      </font></ToggleButton>
+    <ToggleButton fx:id="toggleThird" blendMode="SRC_ATOP" layoutX="850.0" layoutY="428.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="73.0" selected="false" text="🔒">
+      <font>
+         <Font name="Elephant" size="30.0" />
+      </font></ToggleButton>
+    <ToggleButton fx:id="toggleFourth" blendMode="SRC_ATOP" layoutX="996.0" layoutY="428.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="73.0" selected="false" text="🔒">
+      <font>
+         <Font name="Elephant" size="30.0" />
+      </font></ToggleButton>
+    <ToggleButton fx:id="toggleFifth" blendMode="SRC_ATOP" layoutX="1138.0" layoutY="428.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="73.0" selected="false" text="🔒">
+      <font>
+         <Font name="Elephant" size="30.0" />
+      </font></ToggleButton>
+    <ImageView fx:id="secondImage" fitHeight="122.0" fitWidth="125.0" layoutX="678.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
         <image>
             <Image url="@../../../images/3.jpg" />
         </image>
     </ImageView>
-    <ImageView fx:id="thirdImage" fitHeight="124.0" fitWidth="125.0" layoutX="680.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="thirdImage" fitHeight="124.0" fitWidth="125.0" layoutX="824.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
         <image>
             <Image url="@../../../images/4.jpg" />
         </image>
     </ImageView>
-    <ImageView fx:id="forthImage" fitHeight="124.0" fitWidth="125.0" layoutX="826.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="forthImage" fitHeight="124.0" fitWidth="125.0" layoutX="970.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
         <image>
             <Image url="@../../../images/5.jpg" />
         </image>
     </ImageView>
-    <ImageView fx:id="fifthImage" fitHeight="124.0" fitWidth="128.0" layoutX="968.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="fifthImage" fitHeight="124.0" fitWidth="128.0" layoutX="1112.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
         <image>
             <Image url="@../../../images/6.jpg" />
         </image>
@@ -333,7 +685,7 @@
 
 
 
-   <HBox layoutX="1071.0" layoutY="703.0" prefHeight="8.0" prefWidth="0.0" visible="false">
+   <HBox layoutX="1096.0" layoutY="703.0" prefHeight="8.0" prefWidth="0.0" visible="false">
       <children>
          <ImageView fx:id="diceOne" fitHeight="34.0" fitWidth="3.0" pickOnBounds="true" preserveRatio="true">
              <image>
@@ -367,168 +719,132 @@
          </ImageView>
       </children>
    </HBox>
-   <Label alignment="CENTER" layoutX="681.0" layoutY="569.0" prefHeight="33.0" prefWidth="114.0" text="chance :  ">
+   <Label alignment="CENTER" layoutX="929.0" layoutY="538.0" prefHeight="67.0" prefWidth="211.0" text="chance  ">
       <font>
-         <Font size="20.0" />
+         <Font name="Elephant" size="47.0" />
       </font>
    </Label>
-   <Label fx:id="leftChace" alignment="CENTER" layoutX="787.0" layoutY="569.0" prefHeight="33.0" prefWidth="114.0" text="3">
+   <Label fx:id="leftChace" alignment="CENTER" layoutX="965.0" layoutY="628.0" prefHeight="33.0" prefWidth="114.0" text="3">
       <font>
-         <Font size="20.0" />
+         <Font name="Elephant" size="38.0" />
       </font>
    </Label>
-   <Label alignment="CENTER" layoutX="559.0" layoutY="90.0" prefHeight="33.0" prefWidth="114.0" text="TURN : ">
+   <Label alignment="CENTER" layoutX="762.0" layoutY="34.0" prefHeight="122.0" prefWidth="249.0" text="TURN">
       <font>
-         <Font size="20.0" />
+         <Font name="Elephant" size="68.0" />
       </font>
+      <textFill>
+         <LinearGradient endX="0.7345971563981042" endY="1.0" startX="0.6966824644549763" startY="0.2938388625592417">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.7236841917037964" green="0.666727602481842" blue="0.666727602481842" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </textFill>
    </Label>
-   <Label fx:id="userTurn" alignment="CENTER" layoutX="677.0" layoutY="90.0" prefHeight="33.0" prefWidth="114.0" text="userA">
+   <Label fx:id="userTurn" alignment="CENTER" layoutX="787.0" layoutY="160.0" prefHeight="48.0" prefWidth="199.0" text="userA">
       <font>
-         <Font size="20.0" />
+         <Font name="Elephant" size="49.0" />
       </font>
+      <textFill>
+         <LinearGradient endX="0.7345971563981042" endY="1.0" startX="0.6966824644549763" startY="0.2938388625592417">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.6447368264198303" green="0.3462475538253784" blue="0.3462475538253784" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </textFill>
    </Label>
-   <VBox alignment="CENTER" layoutX="270.0" layoutY="8.0" prefHeight="706.0" prefWidth="128.0">
-      <children>
-         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" textAlignment="CENTER" wrapText="true">
-            <VBox.margin>
-               <Insets bottom="13.0" top="13.0" />
-            </VBox.margin>
-            <opaqueInsets>
-               <Insets />
-            </opaqueInsets>
-            <cursor>
-               <Cursor fx:constant="DEFAULT" />
-            </cursor>
-         </Label>
-         <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="USER B" textAlignment="CENTER" wrapText="true">
-            <VBox.margin>
-               <Insets bottom="13.0" top="13.0" />
-            </VBox.margin>
-            <opaqueInsets>
-               <Insets />
-            </opaqueInsets>
-         </Label>
-         <Label fx:id="userB_Aces" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Aces" textAlignment="CENTER" wrapText="true">
-            <VBox.margin>
-               <Insets bottom="13.0" top="13.0" />
-            </VBox.margin>
-            <opaqueInsets>
-               <Insets />
-            </opaqueInsets>
-         </Label>
-         <Label fx:id="userB_Twos" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Twos" textAlignment="CENTER" wrapText="true">
-            <VBox.margin>
-               <Insets bottom="13.0" top="13.0" />
-            </VBox.margin>
-            <opaqueInsets>
-               <Insets />
-            </opaqueInsets>
-         </Label>
-         <Label fx:id="userB_Threes" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Threes" textAlignment="CENTER" wrapText="true">
-            <VBox.margin>
-               <Insets bottom="13.0" top="13.0" />
-            </VBox.margin>
-            <opaqueInsets>
-               <Insets />
-            </opaqueInsets>
-         </Label>
-         <Label fx:id="userB_Fours" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="Fours" textAlignment="CENTER" wrapText="true">
-            <VBox.margin>
-               <Insets bottom="13.0" top="13.0" />
-            </VBox.margin>
-            <opaqueInsets>
-               <Insets />
-            </opaqueInsets>
-         </Label>
-         <Label fx:id="userB_Fives" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Fives" textAlignment="CENTER" wrapText="true">
-            <VBox.margin>
-               <Insets bottom="13.0" top="13.0" />
-            </VBox.margin>
-            <opaqueInsets>
-               <Insets />
-            </opaqueInsets>
-         </Label>
-         <Label fx:id="userB_Sixes" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Sixes" textAlignment="CENTER" wrapText="true">
-            <VBox.margin>
-               <Insets bottom="13.0" top="13.0" />
-            </VBox.margin>
-            <opaqueInsets>
-               <Insets />
-            </opaqueInsets>
-         </Label>
-         <Label fx:id="userB_SubTotal" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="TOTAL" textAlignment="CENTER" wrapText="true">
-            <VBox.margin>
-               <Insets bottom="13.0" top="13.0" />
-            </VBox.margin>
-            <opaqueInsets>
-               <Insets />
-            </opaqueInsets>
-         </Label>
-         <Label fx:id="userB_Bonus" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="BONUS" textAlignment="CENTER" wrapText="true">
-            <VBox.margin>
-               <Insets bottom="13.0" top="13.0" />
-            </VBox.margin>
-            <opaqueInsets>
-               <Insets />
-            </opaqueInsets>
-         </Label>
-         <Label fx:id="userB_Choices" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="choices" textAlignment="CENTER" wrapText="true">
-            <VBox.margin>
-               <Insets bottom="13.0" top="13.0" />
-            </VBox.margin>
-            <opaqueInsets>
-               <Insets />
-            </opaqueInsets>
-         </Label>
-         <Label fx:id="userB_FoaKind" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Four Of A Kind" textAlignment="CENTER" wrapText="true">
-            <VBox.margin>
-               <Insets bottom="13.0" top="13.0" />
-            </VBox.margin>
-            <opaqueInsets>
-               <Insets />
-            </opaqueInsets>
-         </Label>
-         <Label fx:id="userB_FullHouse" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="Full House" textAlignment="CENTER" wrapText="true">
-            <VBox.margin>
-               <Insets bottom="13.0" top="13.0" />
-            </VBox.margin>
-            <opaqueInsets>
-               <Insets />
-            </opaqueInsets>
-         </Label>
-         <Label fx:id="userB_SmallStr" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="small Straiht" textAlignment="CENTER" wrapText="true">
-            <VBox.margin>
-               <Insets bottom="13.0" top="13.0" />
-            </VBox.margin>
-            <opaqueInsets>
-               <Insets />
-            </opaqueInsets>
-         </Label>
-         <Label fx:id="userB_LargeStr" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="large Straiht" textAlignment="CENTER" wrapText="true">
-            <VBox.margin>
-               <Insets bottom="13.0" top="13.0" />
-            </VBox.margin>
-            <opaqueInsets>
-               <Insets />
-            </opaqueInsets>
-         </Label>
-         <Label fx:id="userB_Yacht" alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="YACHT" textAlignment="CENTER" wrapText="true">
-            <VBox.margin>
-               <Insets bottom="13.0" top="13.0" />
-            </VBox.margin>
-            <opaqueInsets>
-               <Insets />
-            </opaqueInsets>
-         </Label>
-         <Label fx:id="userB_Total" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="TOTAL" textAlignment="CENTER" wrapText="true">
-            <opaqueInsets>
-               <Insets />
-            </opaqueInsets>
-            <VBox.margin>
-               <Insets bottom="13.0" top="13.0" />
-            </VBox.margin>
-         </Label>
-      </children>
-   </VBox>
+   <Line endX="12.0" endY="-67.0" layoutX="491.0" layoutY="161.0" startX="-490.0" startY="-67.0" />
+   <Line endX="12.0" endY="-67.0" layoutX="491.0" layoutY="203.0" startX="-490.0" startY="-67.0" />
+   <Line endX="12.0" endY="-67.0" layoutX="491.0" layoutY="633.0" startX="-490.0" startY="-67.0" />
+   <Line endX="12.0" endY="-67.0" layoutX="491.0" layoutY="673.0" startX="-490.0" startY="-67.0" />
+   <Line endX="12.0" endY="-67.0" layoutX="491.0" layoutY="590.0" startX="-490.0" startY="-67.0" />
+   <Line endX="12.0" endY="-67.0" layoutX="491.0" layoutY="288.0" startX="-490.0" startY="-67.0" />
+   <Line endX="12.0" endY="-67.0" layoutX="491.0" layoutY="243.0" startX="-490.0" startY="-67.0" />
+   <Line endX="12.0" endY="-67.0" layoutX="491.0" layoutY="329.0" startX="-490.0" startY="-67.0" />
+   <Line endX="12.0" endY="-67.0" layoutX="491.0" layoutY="373.0" startX="-490.0" startY="-67.0" />
+   <Line endX="12.0" endY="-67.0" layoutX="491.0" layoutY="459.0" startX="-490.0" startY="-67.0" />
+   <Line endX="12.0" endY="-67.0" layoutX="491.0" layoutY="503.0" startX="-490.0" startY="-67.0">
+      <stroke>
+         <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="1.0" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="1.0" />
+                  </color>
+               </Stop>
+            </stops>
+         </RadialGradient>
+      </stroke>
+      <effect>
+         <DropShadow />
+      </effect></Line>
+   <Line endX="12.0" endY="-67.0" layoutX="491.0" layoutY="545.0" startX="-490.0" startY="-67.0" />
+   <Line endX="12.0" endY="-67.0" layoutX="491.0" layoutY="719.0" startX="-490.0" startY="-67.0" />
+   <Line endX="12.0" endY="-67.0" layoutX="491.0" layoutY="760.0" startX="-490.0" startY="-67.0">
+      <effect>
+         <DropShadow />
+      </effect>
+      <stroke>
+         <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="1.0" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0" />
+                  </color>
+               </Stop>
+            </stops>
+         </RadialGradient>
+      </stroke></Line>
+   <Line endX="12.0" endY="-67.0" layoutX="491.0" layoutY="415.0" startX="-490.0" startY="-67.0">
+      <effect>
+         <DropShadow />
+      </effect>
+      <stroke>
+         <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="1.0" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0" />
+                  </color>
+               </Stop>
+            </stops>
+         </RadialGradient>
+      </stroke></Line>
+   <Line endX="-78.0" endY="357.0" layoutX="284.0" layoutY="382.0" startX="-78.0" startY="-382.0" />
+   <Line endX="-78.0" endY="357.0" layoutX="581.0" layoutY="387.0" startX="-78.0" startY="-382.0" />
+   <Line endX="-78.0" endY="357.0" layoutX="433.0" layoutY="382.0" startX="-78.0" startY="-382.0" />
 
 </AnchorPane>

@@ -54,6 +54,10 @@ public class HelloController {
     @FXML
     private ImageView diceSix;
 
+    @FXML
+    private Label userTurn;
+    @FXML
+    private Label leftChace;
 
     @FXML
     protected void randDice() {
@@ -141,6 +145,10 @@ public class HelloController {
         // 랜덤숫자 및 false 주사위 지우기
         randList.clear();
         falseDice.clear();
+        String eee = "eee";
+
+        userTurn.setAccessibleText(eee);
+
 
     }
 
@@ -215,4 +223,6 @@ public class HelloController {
         System.out.println("\n=======================\n");
 
     }
+
+
 }

@@ -1,6 +1,7 @@
 package com.example.yacht_dice;
 
 import javafx.fxml.FXML;
+import javafx.scene.image.Image;
 
 import java.util.ArrayList;
 import java.util.Collections;

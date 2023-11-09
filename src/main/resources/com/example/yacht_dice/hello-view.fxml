@@ -10,6 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="1000.0" maxWidth="1000.0" minHeight="700.0" minWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.yacht_dice.HelloController">
     <VBox alignment="CENTER" layoutX="7.0" layoutY="10.0" prefHeight="715.0" prefWidth="135.0">
@@ -81,7 +82,7 @@
                     <Insets />
                 </opaqueInsets>
             </Label>
-            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="TOTAL" textAlignment="CENTER" wrapText="true">
+            <Label alignment="CENTER" layoutX="10.0" nodeOrientation="LEFT_TO_RIGHT" text="SUB TOTAL" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
                     <Insets bottom="13.0" top="13.0" />
                 </VBox.margin>
@@ -145,9 +146,17 @@
                     <Insets />
                 </opaqueInsets>
             </Label>
+         <Label alignment="CENTER" layoutX="56.0" layoutY="675.0" nodeOrientation="LEFT_TO_RIGHT" text="TOTAL" textAlignment="CENTER" wrapText="true">
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <VBox.margin>
+               <Insets bottom="13.0" top="13.0" />
+            </VBox.margin>
+         </Label>
         </children>
     </VBox>
-    <VBox alignment="CENTER" layoutX="142.0" layoutY="15.0" prefHeight="706.0" prefWidth="128.0">
+    <VBox alignment="CENTER" layoutX="142.0" layoutY="10.0" prefHeight="706.0" prefWidth="128.0">
         <children>
             <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="USER 1" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
@@ -280,9 +289,17 @@
                     <Insets />
                 </opaqueInsets>
             </Label>
+         <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="TOTAL" textAlignment="CENTER" wrapText="true">
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <VBox.margin>
+               <Insets bottom="13.0" top="13.0" />
+            </VBox.margin>
+         </Label>
         </children>
     </VBox>
-    <VBox alignment="CENTER" layoutX="262.0" layoutY="14.0" prefHeight="706.0" prefWidth="128.0">
+    <VBox alignment="CENTER" layoutX="262.0" layoutY="6.0" prefHeight="706.0" prefWidth="128.0">
         <children>
             <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="USER 2" textAlignment="CENTER" wrapText="true">
                 <VBox.margin>
@@ -412,35 +429,43 @@
                     <Insets />
                 </opaqueInsets>
             </Label>
+         <Label alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="TOTAL" textAlignment="CENTER" wrapText="true">
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <VBox.margin>
+               <Insets bottom="13.0" top="13.0" />
+            </VBox.margin>
+         </Label>
         </children>
     </VBox>
-    <Button fx:id="throwDice" layoutX="659.0" layoutY="621.0" minHeight="18.0" onAction="#randDice" prefHeight="32.0" prefWidth="78.0" text="던지기" />
-    <ToggleButton fx:id="toggleFirst" blendMode="GREEN" layoutX="412.0" layoutY="500.0" mnemonicParsing="false" selected="false" text="ToggleButton" />
-    <ToggleButton fx:id="toggleSecond" blendMode="GREEN" layoutX="531.0" layoutY="500.0" mnemonicParsing="false" selected="false" text="ToggleButton" />
-    <ToggleButton fx:id="toggleThird" blendMode="GREEN" layoutX="665.0" layoutY="500.0" mnemonicParsing="false" selected="false" text="ToggleButton" />
-    <ToggleButton fx:id="toggleFourth" blendMode="GREEN" layoutX="787.0" layoutY="500.0" mnemonicParsing="false" selected="false" text="ToggleButton" />
-    <ToggleButton fx:id="toggleFifth" blendMode="GREEN" layoutX="907.0" layoutY="500.0" mnemonicParsing="false" selected="false" text="ToggleButton" />
-    <ImageView fx:id="firstImage" fitHeight="69.0" fitWidth="94.0" layoutX="406.0" layoutY="342.0" pickOnBounds="true" preserveRatio="true" >
+    <Button fx:id="throwDice" blendMode="DIFFERENCE" cache="true" layoutX="544.0" layoutY="555.0" minHeight="18.0" onAction="#randDice" prefHeight="60.0" prefWidth="62.0" text="roll" />
+    <ToggleButton fx:id="toggleFirst" blendMode="SRC_ATOP" layoutX="393.0" layoutY="431.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="114.0" selected="false" text="ToggleButton" />
+    <ToggleButton fx:id="toggleSecond" blendMode="SRC_ATOP" layoutX="537.0" layoutY="431.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="114.0" selected="false" text="ToggleButton" />
+    <ToggleButton fx:id="toggleThird" blendMode="SRC_ATOP" layoutX="684.0" layoutY="431.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="114.0" selected="false" text="ToggleButton" />
+    <ToggleButton fx:id="toggleFourth" blendMode="SRC_ATOP" layoutX="832.0" layoutY="431.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="114.0" selected="false" text="ToggleButton" />
+    <ToggleButton fx:id="toggleFifth" blendMode="SRC_ATOP" layoutX="972.0" layoutY="431.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="114.0" selected="false" text="ToggleButton" />
+    <ImageView fx:id="firstImage" fitHeight="122.0" fitWidth="124.0" layoutX="392.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
         <image>
             <Image url="@../../../images/2.jpg" />
         </image>
     </ImageView>
-    <ImageView fx:id="secondImage" fitHeight="75.0" fitWidth="63.0" layoutX="553.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="secondImage" fitHeight="122.0" fitWidth="125.0" layoutX="534.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
         <image>
             <Image url="@../../../images/3.jpg" />
         </image>
     </ImageView>
-    <ImageView fx:id="thirdImage" fitHeight="87.0" fitWidth="78.0" layoutX="673.0" layoutY="325.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="thirdImage" fitHeight="124.0" fitWidth="125.0" layoutX="680.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
         <image>
             <Image url="@../../../images/4.jpg" />
         </image>
     </ImageView>
-    <ImageView fx:id="forthImage" fitHeight="87.0" fitWidth="86.0" layoutX="780.0" layoutY="324.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="forthImage" fitHeight="124.0" fitWidth="125.0" layoutX="826.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true">
         <image>
             <Image url="@../../../images/5.jpg" />
         </image>
     </ImageView>
-    <ImageView fx:id="fifthImage" fitHeight="102.0" fitWidth="94.0" layoutX="907.0" layoutY="316.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="fifthImage" fitHeight="124.0" fitWidth="128.0" layoutX="968.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true">
         <image>
             <Image url="@../../../images/6.jpg" />
         </image>
@@ -482,5 +507,25 @@
          </ImageView>
       </children>
    </HBox>
+   <Label alignment="CENTER" layoutX="681.0" layoutY="569.0" prefHeight="33.0" prefWidth="114.0" text="chance :  ">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Label>
+   <Label fx:id="leftChace" alignment="CENTER" layoutX="787.0" layoutY="569.0" prefHeight="33.0" prefWidth="114.0">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Label>
+   <Label alignment="CENTER" layoutX="559.0" layoutY="90.0" prefHeight="33.0" prefWidth="114.0" text="TURN : ">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Label>
+   <Label fx:id="userTurn" alignment="CENTER" layoutX="677.0" layoutY="90.0" prefHeight="33.0" prefWidth="114.0">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Label>
 
 </AnchorPane>

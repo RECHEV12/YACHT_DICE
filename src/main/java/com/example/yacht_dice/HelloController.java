@@ -13,6 +13,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Iterator;
 
 import static com.example.yacht_dice.useMethod.checkAces;
 import static com.example.yacht_dice.useMethod.randNumSix;
@@ -145,10 +146,7 @@ public class HelloController {
         // 랜덤숫자 및 false 주사위 지우기
         randList.clear();
         falseDice.clear();
-        String eee = "eee";
-
-        userTurn.setAccessibleText(eee);
-
+        changeUser();
 
     }
 
@@ -224,5 +222,41 @@ public class HelloController {
 
     }
 
+
+    protected void decChance() {
+        int nowNum = Integer.parseInt(leftChace.getText());
+
+        switch (nowNum) {
+
+            case 1:
+                nowNum = 3;
+                break;
+            case 2:
+                nowNum = 1;
+                break;
+            case 3:
+                nowNum = 2;
+                break;
+        }
+
+        leftChace.setText(Integer.toString(nowNum));
+    }
+
+    protected void changeUser() {
+
+        if (userTurn.equals("userA")) {
+            decChance();
+            leftChace.equals("1");
+            userTurn.setText("userB");
+
+
+        }
+
+        if (userTurn.equals("userB")) {
+            decChance();
+            leftChace.equals("1");
+            userTurn.setText("userA");
+        }
+    }
 
 }

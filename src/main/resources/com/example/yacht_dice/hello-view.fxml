@@ -512,7 +512,7 @@
          <Font size="20.0" />
       </font>
    </Label>
-   <Label fx:id="leftChace" alignment="CENTER" layoutX="787.0" layoutY="569.0" prefHeight="33.0" prefWidth="114.0">
+   <Label fx:id="leftChace" alignment="CENTER" layoutX="787.0" layoutY="569.0" prefHeight="33.0" prefWidth="114.0" text="3">
       <font>
          <Font size="20.0" />
       </font>
@@ -522,7 +522,7 @@
          <Font size="20.0" />
       </font>
    </Label>
-   <Label fx:id="userTurn" alignment="CENTER" layoutX="677.0" layoutY="90.0" prefHeight="33.0" prefWidth="114.0">
+   <Label fx:id="userTurn" alignment="CENTER" layoutX="677.0" layoutY="90.0" prefHeight="33.0" prefWidth="114.0" text="userA">
       <font>
          <Font size="20.0" />
       </font>

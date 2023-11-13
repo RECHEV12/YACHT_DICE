@@ -580,6 +580,7 @@ public class HelloController {
         }
     }
 
+
     @FXML
     protected void choiceAceUserA() {
 

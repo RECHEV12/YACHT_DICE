@@ -2,6 +2,7 @@ package com.example.yacht_dice;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Paint;
 
@@ -112,10 +113,15 @@ public class HelloController {
     private Label userB_Yacht;
     @FXML
     private Label userB_Total;
+
     int nowNum = 3;
+
     boolean nowA = true;
+
     boolean nowB = false;
+
     int roundNum = 1;
+
     private UserData tempUser = new UserData();
 
     private UserData userA = new UserData();
@@ -152,6 +158,7 @@ public class HelloController {
             }
         }
 
+
         // 랜덤 숫자 배열 만들기
         ArrayList<Integer> randList = new ArrayList<>();
 
@@ -165,6 +172,9 @@ public class HelloController {
 
             // 랜덤숫자 가져오기
             int temp = randList.get(i);
+
+
+
 
             // 랜덤숫자에 따른 그림 가져오기
             int randDiceNum = temp - 1;
@@ -186,7 +196,7 @@ public class HelloController {
             }
         }
 
-        int falseDiceIndex = 0;
+        int falseDiceIndex;
         // 전부 true로 바꿔 둔 주사위 중 원래 안눌려져 있던 주사위 되돌리기
         for (int i = 0; i < falseDice.size(); i++) {
             falseDiceIndex = falseDice.get(i);
@@ -590,10 +600,6 @@ public class HelloController {
 
         userA.setAce(tempUser.getAce());
         userA_Aces.setTextFill(Paint.valueOf("black"));
-
-
-
-
 
         getBonusNumA();
         getSubTotalA();

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="1000.0" maxWidth="1259.0" minHeight="700.0" minWidth="1100.0" prefHeight="748.0" prefWidth="1272.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.yacht_dice.ResultController">
+   <children>
+      <HBox alignment="CENTER" layoutX="14.0" layoutY="149.0" prefHeight="69.0" prefWidth="1232.0">
+         <children>
+            <Label alignment="CENTER" layoutX="299.0" layoutY="27.0" prefWidth="80.0" text="Aces">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="313.0" layoutY="27.0" prefWidth="80.0" text="Twos">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="328.0" layoutY="27.0" prefWidth="80.0" text="Threes">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="328.0" layoutY="27.0" prefWidth="80.0" text="Fours">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="342.0" layoutY="27.0" prefWidth="80.0" text="Fives">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="357.0" layoutY="27.0" prefWidth="80.0" text="Sixes">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="371.0" layoutY="27.0" prefWidth="80.0" text="BONUS">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="458.0" layoutY="27.0" prefWidth="80.0" text="Choices">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="386.0" layoutY="27.0" prefWidth="140.0" text="Four of A Kind">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="400.0" layoutY="27.0" prefWidth="100.0" text="Full House">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="415.0" layoutY="27.0" prefWidth="100.0" text="S.Straight">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="429.0" layoutY="27.0" prefWidth="100.0" text="L.Straight">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="473.0" layoutY="27.0" prefWidth="80.0" text="YACHT">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="1112.0" layoutY="30.0" prefWidth="80.0" text="TOTAL">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Label alignment="CENTER" layoutX="542.0" layoutY="14.0" prefHeight="63.0" prefWidth="176.0" text="RESULT">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="14.0" layoutY="374.0" prefHeight="69.0" prefWidth="1232.0">
+         <children>
+            <Label alignment="CENTER" layoutX="299.0" layoutY="27.0" prefWidth="80.0" text="Aces">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="313.0" layoutY="27.0" prefWidth="80.0" text="Twos">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="328.0" layoutY="27.0" prefWidth="80.0" text="Threes">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="328.0" layoutY="27.0" prefWidth="80.0" text="Fours">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="342.0" layoutY="27.0" prefWidth="80.0" text="Fives">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="357.0" layoutY="27.0" prefWidth="80.0" text="Sixes">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="371.0" layoutY="27.0" prefWidth="80.0" text="BONUS">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="458.0" layoutY="27.0" prefWidth="80.0" text="Choices">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="386.0" layoutY="27.0" prefWidth="140.0" text="Four of A Kind">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="400.0" layoutY="27.0" prefWidth="100.0" text="Full House">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="415.0" layoutY="27.0" prefWidth="100.0" text="S.Straight">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="429.0" layoutY="27.0" prefWidth="100.0" text="L.Straight">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="473.0" layoutY="27.0" prefWidth="80.0" text="YACHT">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="1112.0" layoutY="30.0" prefWidth="80.0" text="TOTAL">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Label alignment="CENTER" layoutX="542.0" layoutY="86.0" prefHeight="63.0" prefWidth="176.0" text="USER A">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="542.0" layoutY="311.0" prefHeight="63.0" prefWidth="176.0" text="USER B">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="406.0" layoutY="605.0" prefHeight="63.0" prefWidth="176.0" text="WINNER">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="whoWinner" alignment="CENTER" layoutX="630.0" layoutY="605.0" prefHeight="63.0" prefWidth="176.0" text="WINNER">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="14.0" layoutY="218.0" prefHeight="69.0" prefWidth="1232.0">
+         <children>
+            <Label fx:id="ac_A" alignment="CENTER" layoutX="299.0" layoutY="27.0" prefWidth="80.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="tw_A" alignment="CENTER" layoutX="313.0" layoutY="27.0" prefWidth="80.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="thr_A" alignment="CENTER" layoutX="328.0" layoutY="27.0" prefWidth="80.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="four_A" alignment="CENTER" layoutX="328.0" layoutY="27.0" prefWidth="80.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="five_A" alignment="CENTER" layoutX="342.0" layoutY="27.0" prefWidth="80.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="six_A" alignment="CENTER" layoutX="357.0" layoutY="27.0" prefWidth="80.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="bns_A" alignment="CENTER" layoutX="371.0" layoutY="27.0" prefWidth="80.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="choice_A" alignment="CENTER" layoutX="458.0" layoutY="27.0" prefWidth="80.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="foka_A" alignment="CENTER" layoutX="386.0" layoutY="27.0" prefWidth="140.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="fh_A" alignment="CENTER" layoutX="400.0" layoutY="27.0" prefWidth="100.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="ss_A" alignment="CENTER" layoutX="415.0" layoutY="27.0" prefWidth="100.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="ls_A" alignment="CENTER" layoutX="429.0" layoutY="27.0" prefWidth="100.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="ya_A" alignment="CENTER" layoutX="473.0" layoutY="27.0" prefWidth="80.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="total_A" alignment="CENTER" layoutX="1112.0" layoutY="30.0" prefWidth="80.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="14.0" layoutY="449.0" prefHeight="69.0" prefWidth="1232.0">
+         <children>
+            <Label fx:id="ac_B" alignment="CENTER" layoutX="299.0" layoutY="27.0" prefWidth="80.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="tw_B" alignment="CENTER" layoutX="313.0" layoutY="27.0" prefWidth="80.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="thr_B" alignment="CENTER" layoutX="328.0" layoutY="27.0" prefWidth="80.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="four_B" alignment="CENTER" layoutX="328.0" layoutY="27.0" prefWidth="80.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="five_B" alignment="CENTER" layoutX="342.0" layoutY="27.0" prefWidth="80.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="six_B" alignment="CENTER" layoutX="357.0" layoutY="27.0" prefWidth="80.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="bns_B" alignment="CENTER" layoutX="371.0" layoutY="27.0" prefWidth="80.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="choice_B" alignment="CENTER" layoutX="458.0" layoutY="27.0" prefWidth="80.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="foka_B" alignment="CENTER" layoutX="386.0" layoutY="27.0" prefWidth="140.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="fh_B" alignment="CENTER" layoutX="400.0" layoutY="27.0" prefWidth="100.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="ss_B" alignment="CENTER" layoutX="415.0" layoutY="27.0" prefWidth="100.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="ls_B" alignment="CENTER" layoutX="429.0" layoutY="27.0" prefWidth="100.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="ya_B" alignment="CENTER" layoutX="473.0" layoutY="27.0" prefWidth="80.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="total_B" alignment="CENTER" layoutX="1112.0" layoutY="30.0" prefWidth="80.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

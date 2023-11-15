@@ -89,7 +89,6 @@ public class UseMethod {
     }
 
     public static int checkChoices(ArrayList<Integer> diceList) {
-        int result = 0;
 
         int firstNum = diceList.get(0);
         int secondNum = diceList.get(1);
@@ -97,9 +96,7 @@ public class UseMethod {
         int fourNum = diceList.get(3);
         int fiveNum = diceList.get(4);
 
-        result = (firstNum + secondNum + thirdNum + fourNum + fiveNum);
-
-        return result;
+        return (firstNum + secondNum + thirdNum + fourNum + fiveNum);
     }
 
     public static int checkFourOfAKind(ArrayList<Integer> diceList) {

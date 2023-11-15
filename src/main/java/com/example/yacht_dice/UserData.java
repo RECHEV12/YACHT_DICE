@@ -40,8 +40,6 @@ public class UserData {
         this.total = total;
     }
 
-    private static UserData userA = new UserData("userA",0,0,0,0,0,0,"0/63",0,0,0,0,0,0,0,0);
-    private static UserData userB = new UserData("userB",0,0,0,0,0,0,"0/63",0,0,0,0,0,0,0,0);
 
     public String getName() {
         return name;
@@ -171,21 +169,7 @@ public class UserData {
         this.total = total;
     }
 
-    public static UserData getUserA() {
-        return userA;
-    }
 
-    public static void setUserA(UserData userA) {
-        UserData.userA = userA;
-    }
-
-    public static UserData getUserB() {
-        return userB;
-    }
-
-    public static void setUserB(UserData userB) {
-        UserData.userB = userB;
-    }
 }
 
 

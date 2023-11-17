@@ -267,11 +267,8 @@ public class HelloController {
             } else {
                 lab.setText(Integer.toString(userNumList.get(i)));
             }
-            System.out.println("현재 검정?" + (lab.getTextFill() == Paint.valueOf("black")));
-            System.out.println(numList.get(i));
-            System.out.println(userNumList.get(i));
+
         }
-        System.out.println("==========================================");
         showBlueTextNum.clear();
         labelList.clear();
     }

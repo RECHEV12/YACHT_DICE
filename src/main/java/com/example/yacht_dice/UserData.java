@@ -1,7 +1,6 @@
 package com.example.yacht_dice;
 
 public class UserData {
-    private String name;
     private int ace;
     private int two;
     private int three;
@@ -21,33 +20,6 @@ public class UserData {
     public UserData() {
     }
 
-    public UserData(String name, int ace, int two, int three, int four, int five, int six, String subTotal, int bonus, int choices, int foakind, int fullHouse, int smallStraight, int largeStraight, int yacht, int total) {
-        this.name = name;
-        this.ace = ace;
-        this.two = two;
-        this.three = three;
-        this.four = four;
-        this.five = five;
-        this.six = six;
-        this.subTotal = subTotal;
-        this.bonus = bonus;
-        this.choices = choices;
-        this.foakind = foakind;
-        this.fullHouse = fullHouse;
-        this.smallStraight = smallStraight;
-        this.largeStraight = largeStraight;
-        this.yacht = yacht;
-        this.total = total;
-    }
-
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public int getAce() {
         return ace;

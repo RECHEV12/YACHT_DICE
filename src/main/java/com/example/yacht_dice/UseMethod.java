@@ -1,7 +1,6 @@
 package com.example.yacht_dice;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.*;
 
 public class UseMethod {
     public static int randNumSix() {
@@ -70,23 +69,6 @@ public class UseMethod {
         return result;
     }
 
-    public static int checkSubTotal(ArrayList<Integer> aceToSix) {
-        int defaultNum = 0;
-        for (int i = 0; i < aceToSix.size(); i++) {
-            defaultNum += aceToSix.get(i);
-        }
-        return defaultNum;
-    }
-
-
-    public static int checkBonus(int subTotal) {
-        int result = 0;
-
-        if (subTotal >= 63) {
-            result = 35;
-        }
-        return result;
-    }
 
     public static int checkChoices(ArrayList<Integer> diceList) {
 
@@ -140,33 +122,48 @@ public class UseMethod {
     public static int checkSmallStraight(ArrayList<Integer> diceList) {
         int result = 0;
         int cnt = 0;
+        int a = 0;
+        int b = 0;
 
         ArrayList<Integer> straightInt = new ArrayList<>();
 
+        straightInt.add(diceList.get(diceList.size() - 1));
 
-        straightInt.addAll(diceList);
-
-
-        Collections.sort(straightInt);
-
-        for (int i = 0; i < straightInt.size() - 1; i++) {
-            if (straightInt.get(i) == straightInt.get(i + 1)) {
-                straightInt.remove(i + 1);
-                i--;
+        for (int i = 0; i < diceList.size() - 1; i++) {
+            if (!(diceList.get(i) == diceList.get(i + 1))) {
+                straightInt.add(diceList.get(i));
             }
         }
 
-        for (int i = 0; i < straightInt.size() - 1; i++) {
-            if (straightInt.get(i) + 1 == straightInt.get(i + 1)) {
-                cnt++;
+        Collections.sort(straightInt);
 
+        if (straightInt.size() == 4) {
+            for (int i = 0; i < straightInt.size() - 1; i++) {
+                if (straightInt.get(i) + 1 == straightInt.get(i + 1)) {
+                    cnt++;
+                }
             }
+        } else if (straightInt.size() == 5) {
+
+            for (int i = 0; i < 3; i++) {
+                if (straightInt.get(i) + 1 == straightInt.get(i + 1)) {
+                    a++;
+                }
+            }
+            for (int i = 4; i > 1; i--) {
+                if (straightInt.get(i) - 1 == straightInt.get(i - 1)) {
+                    b++;
+                }
+            }
+        }
+
+        if (a >= 3 || b >= 3) {
+            cnt = 3;
         }
 
         if (cnt >= 3) {
             result = 15;
         }
-
 
         return result;
     }
@@ -175,31 +172,18 @@ public class UseMethod {
         int result = 0;
         int cnt = 0;
 
-        ArrayList<Integer> straightInt = new ArrayList<>();
-
-        straightInt.addAll(diceList);
+        Collections.sort(diceList);
 
 
-        Collections.sort(straightInt);
-
-        for (int i = 0; i < straightInt.size() - 1; i++) {
-            if (straightInt.get(i) == straightInt.get(i + 1)) {
-                straightInt.remove(i + 1);
-                i--;
-            }
-        }
-
-        for (int i = 0; i < straightInt.size() - 1; i++) {
-            if (straightInt.get(i) + 1 == straightInt.get(i + 1)) {
+        for (int i = 0; i < diceList.size() - 1; i++) {
+            if (diceList.get(i) + 1 == diceList.get(i + 1)) {
                 cnt++;
-
             }
         }
 
         if (cnt >= 4) {
             result = 30;
         }
-
 
         return result;
     }
@@ -224,11 +208,5 @@ public class UseMethod {
         return result;
     }
 
-    public static int checkTotal(ArrayList<Integer> allNumber) {
-        int result = 0;
-        for (int i = 0; i < allNumber.size(); i++) {
-            result += allNumber.get(i);
-        }
-        return result;
-    }
+
 }

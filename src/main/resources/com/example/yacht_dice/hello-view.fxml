@@ -724,7 +724,7 @@
          <Font name="Elephant" size="47.0" />
       </font>
    </Label>
-   <Label fx:id="leftChace" alignment="CENTER" layoutX="965.0" layoutY="628.0" prefHeight="33.0" prefWidth="114.0" text="3">
+   <Label fx:id="leftChance" alignment="CENTER" layoutX="965.0" layoutY="628.0" prefHeight="33.0" prefWidth="114.0" text="3">
       <font>
          <Font name="Elephant" size="38.0" />
       </font>

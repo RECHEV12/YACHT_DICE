@@ -52,10 +52,10 @@ public class HelloController {
     @FXML
     private Label userTurn;
     @FXML
-    private Label leftChace;
+    private Label leftChance;
 
     @FXML
-    private Label userA_Aces;
+    protected Label userA_Aces;
     @FXML
     private Label userA_Twos;
     @FXML
@@ -124,7 +124,7 @@ public class HelloController {
 
     int roundNum = 1;
 
-    private UserData tempUser = new UserData();
+    protected UserData tempUser = new UserData();
 
     protected UserData userA = new UserData();
     protected UserData userB = new UserData();
@@ -239,13 +239,6 @@ public class HelloController {
     }
 
 
-    public ArrayList<UserData> dfe() {
-        ArrayList<UserData> ee = new ArrayList<>();
-        ee.add(userA);
-        ee.add(userB);
-
-        return ee;
-    }
 
 
     /**
@@ -267,11 +260,8 @@ public class HelloController {
             } else {
                 lab.setText(Integer.toString(userNumList.get(i)));
             }
-            System.out.println("현재 검정?" + (lab.getTextFill() == Paint.valueOf("black")));
-            System.out.println(numList.get(i));
-            System.out.println(userNumList.get(i));
+
         }
-        System.out.println("==========================================");
         showBlueTextNum.clear();
         labelList.clear();
     }
@@ -371,7 +361,7 @@ public class HelloController {
     @FXML
     protected void changeUser() {
 
-        leftChace.setText("3");
+        leftChance.setText("3");
         nowNum = 3;
         ArrayList<Label> list = userA_List;
         addLIst();
@@ -453,14 +443,13 @@ public class HelloController {
                 break;
         }
 
-        leftChace.setText(Integer.toString(nowNum));
+        leftChance.setText(Integer.toString(nowNum));
     }
 
     /**
      * 자기 차례가 아니거나 횟수가 0이면 리턴
-     *
      * @param a 어느쪽 유저인지 확인
-     * @return
+     * @return 해당 값에 맞는 T/F 리턴
      */
     protected boolean myTurnCheck(String a) {
         boolean now;
@@ -471,7 +460,7 @@ public class HelloController {
             now = nowB;
         }
 
-        return !now || leftChace.getText().equals("3");
+        return !now || leftChance.getText().equals("3");
     }
 
     /**
@@ -618,6 +607,7 @@ public class HelloController {
         toggle.add(toggleThird);
         toggle.add(toggleFourth);
         toggle.add(toggleFifth);
+
     }
 
     /**
@@ -660,7 +650,7 @@ public class HelloController {
         userNumList.set(idx++, user.getFullHouse());
         userNumList.set(idx++, user.getSmallStraight());
         userNumList.set(idx++, user.getLargeStraight());
-        userNumList.set(idx++, user.getYacht());
+        userNumList.set(idx, user.getYacht());
 
 
     }
@@ -683,6 +673,10 @@ public class HelloController {
             return;
         }
 
+        if ((userA_Aces.getTextFill() == Paint.valueOf("black"))) {
+            return;
+        }
+
         userA.setAce(tempUser.getAce());
         userA_Aces.setTextFill(Paint.valueOf("black"));
 
@@ -697,6 +691,10 @@ public class HelloController {
         String me = "A";
 
         if (myTurnCheck(me)) {
+            return;
+        }
+
+        if ((userA_Twos.getTextFill() == Paint.valueOf("black"))) {
             return;
         }
 
@@ -716,6 +714,10 @@ public class HelloController {
             return;
         }
 
+        if ((userA_Threes.getTextFill() == Paint.valueOf("black"))) {
+            return;
+        }
+
         userA.setThree(tempUser.getThree());
         userA_Threes.setTextFill(Paint.valueOf("black"));
 
@@ -728,6 +730,10 @@ public class HelloController {
     protected void choiceFourUserA() {
         String me = "A";
         if (myTurnCheck(me)) {
+            return;
+        }
+
+        if ((userA_Fours.getTextFill() == Paint.valueOf("black"))) {
             return;
         }
 
@@ -746,6 +752,11 @@ public class HelloController {
             return;
         }
 
+
+        if ((userA_Fives.getTextFill() == Paint.valueOf("black"))) {
+            return;
+        }
+
         userA.setFive(tempUser.getFive());
         userA_Fives.setTextFill(Paint.valueOf("black"));
 
@@ -761,6 +772,10 @@ public class HelloController {
             return;
         }
 
+
+        if ((userA_Sixes.getTextFill() == Paint.valueOf("black"))) {
+            return;
+        }
         userA.setSix(tempUser.getSix());
         userA_Sixes.setTextFill(Paint.valueOf("black"));
 
@@ -776,6 +791,9 @@ public class HelloController {
             return;
         }
 
+        if ((userA_Choices.getTextFill() == Paint.valueOf("black"))) {
+            return;
+        }
         userA.setChoices(tempUser.getChoices());
         userA_Choices.setTextFill(Paint.valueOf("black"));
 
@@ -789,6 +807,9 @@ public class HelloController {
             return;
         }
 
+        if ((userA_FoaKind.getTextFill() == Paint.valueOf("black"))) {
+            return;
+        }
         userA.setFoakind(tempUser.getFoakind());
         userA_FoaKind.setTextFill(Paint.valueOf("black"));
 
@@ -802,6 +823,9 @@ public class HelloController {
             return;
         }
 
+        if ((userA_FullHouse.getTextFill() == Paint.valueOf("black"))) {
+            return;
+        }
         userA.setFullHouse(tempUser.getFullHouse());
         userA_FullHouse.setTextFill(Paint.valueOf("black"));
 
@@ -815,6 +839,9 @@ public class HelloController {
             return;
         }
 
+        if ((userA_SmallStr.getTextFill() == Paint.valueOf("black"))) {
+            return;
+        }
         userA.setSmallStraight(tempUser.getSmallStraight());
         userA_SmallStr.setTextFill(Paint.valueOf("black"));
 
@@ -828,6 +855,9 @@ public class HelloController {
             return;
         }
 
+        if ((userA_LargeStr.getTextFill() == Paint.valueOf("black"))) {
+            return;
+        }
         userA.setLargeStraight(tempUser.getLargeStraight());
         userA_LargeStr.setTextFill(Paint.valueOf("black"));
 
@@ -841,6 +871,9 @@ public class HelloController {
             return;
         }
 
+        if ((userA_Yacht.getTextFill() == Paint.valueOf("black"))) {
+            return;
+        }
         userA.setYacht(tempUser.getYacht());
         userA_Yacht.setTextFill(Paint.valueOf("black"));
 
@@ -851,6 +884,10 @@ public class HelloController {
     protected void choiceAceUserB() {
         String me = "B";
         if (myTurnCheck(me)) {
+            return;
+        }
+
+        if ((userB_Aces.getTextFill() == Paint.valueOf("black"))) {
             return;
         }
 
@@ -868,6 +905,10 @@ public class HelloController {
             return;
         }
 
+        if ((userB_Twos.getTextFill() == Paint.valueOf("black"))) {
+            return;
+        }
+
         userB.setTwo(tempUser.getTwo());
         userB_Twos.setTextFill(Paint.valueOf("black"));
 
@@ -881,6 +922,11 @@ public class HelloController {
         if (myTurnCheck(me)) {
             return;
         }
+
+        if ((userB_Threes.getTextFill() == Paint.valueOf("black"))) {
+            return;
+        }
+
         userB.setThree(tempUser.getThree());
         userB_Threes.setTextFill(Paint.valueOf("black"));
 
@@ -892,6 +938,10 @@ public class HelloController {
     protected void choiceFourUserB() {
         String me = "B";
         if (myTurnCheck(me)) {
+            return;
+        }
+
+        if ((userB_Fours.getTextFill() == Paint.valueOf("black"))) {
             return;
         }
 
@@ -909,6 +959,10 @@ public class HelloController {
             return;
         }
 
+        if ((userB_Fives.getTextFill() == Paint.valueOf("black"))) {
+            return;
+        }
+
         userB.setFive(tempUser.getFive());
         userB_Fives.setTextFill(Paint.valueOf("black"));
 
@@ -920,6 +974,10 @@ public class HelloController {
     protected void choiceSixUserB() {
         String me = "B";
         if (myTurnCheck(me)) {
+            return;
+        }
+
+        if ((userB_Sixes.getTextFill() == Paint.valueOf("black"))) {
             return;
         }
 
@@ -937,6 +995,10 @@ public class HelloController {
             return;
         }
 
+        if ((userB_Choices.getTextFill() == Paint.valueOf("black"))) {
+            return;
+        }
+
         userB.setChoices(tempUser.getChoices());
         userB_Choices.setTextFill(Paint.valueOf("black"));
 
@@ -947,6 +1009,10 @@ public class HelloController {
     protected void choiceFokaUserB() {
         String me = "B";
         if (myTurnCheck(me)) {
+            return;
+        }
+
+        if ((userB_FoaKind.getTextFill() == Paint.valueOf("black"))) {
             return;
         }
 
@@ -963,6 +1029,10 @@ public class HelloController {
             return;
         }
 
+        if ((userB_FullHouse.getTextFill() == Paint.valueOf("black"))) {
+            return;
+        }
+
         userB.setFullHouse(tempUser.getFullHouse());
         userB_FullHouse.setTextFill(Paint.valueOf("black"));
 
@@ -973,6 +1043,10 @@ public class HelloController {
     protected void choiceSSrUserB() {
         String me = "B";
         if (myTurnCheck(me)) {
+            return;
+        }
+
+        if ((userB_SmallStr.getTextFill() == Paint.valueOf("black"))) {
             return;
         }
 
@@ -989,6 +1063,10 @@ public class HelloController {
             return;
         }
 
+        if ((userB_LargeStr.getTextFill() == Paint.valueOf("black"))) {
+            return;
+        }
+
         userB.setLargeStraight(tempUser.getLargeStraight());
         userB_LargeStr.setTextFill(Paint.valueOf("black"));
 
@@ -999,6 +1077,10 @@ public class HelloController {
     protected void choiceYachtUserB() {
         String me = "B";
         if (myTurnCheck(me)) {
+            return;
+        }
+
+        if ((userB_Yacht.getTextFill() == Paint.valueOf("black"))) {
             return;
         }
 

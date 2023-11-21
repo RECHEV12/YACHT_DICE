@@ -29,15 +29,8 @@ public class Dice {
         return button;
     }
 
-    public void setButton(ToggleButton button) {
-        this.button = button;
-    }
 
     public ImageView getImage() {
         return image;
-    }
-
-    public void setImage(ImageView image) {
-        this.image = image;
     }
 }

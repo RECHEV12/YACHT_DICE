@@ -122,8 +122,6 @@ public class UseMethod {
     public static int checkSmallStraight(ArrayList<Integer> diceList) {
         int result = 0;
         int cnt = 0;
-        int a = 0;
-        int b = 0;
 
         ArrayList<Integer> straightInt = new ArrayList<>();
 
@@ -137,28 +135,12 @@ public class UseMethod {
 
         Collections.sort(straightInt);
 
-        if (straightInt.size() == 4) {
+        if (straightInt.size() >= 4) {
             for (int i = 0; i < straightInt.size() - 1; i++) {
                 if (straightInt.get(i) + 1 == straightInt.get(i + 1)) {
                     cnt++;
                 }
             }
-        } else if (straightInt.size() == 5) {
-
-            for (int i = 0; i < 3; i++) {
-                if (straightInt.get(i) + 1 == straightInt.get(i + 1)) {
-                    a++;
-                }
-            }
-            for (int i = 4; i > 1; i--) {
-                if (straightInt.get(i) - 1 == straightInt.get(i - 1)) {
-                    b++;
-                }
-            }
-        }
-
-        if (a >= 3 || b >= 3) {
-            cnt = 3;
         }
 
         if (cnt >= 3) {
